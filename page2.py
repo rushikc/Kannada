@@ -15,18 +15,18 @@ import  shelve
 
 driver = webdriver.Chrome()  #open chrome webdriver.
 
-
+fh = open('links.txt','w')
 db = shelve.open('link')
 l_links = db['l_links']
 db.close()
 
 home = 'https://www.shabdkosh.com'
-print(l_links)
-print(len(l_links))
+# print(l_links)
+# print(len(l_links))
 l3_links = []
-l2_links = []
-for i in range(len(l_links)):
 
+for i in range(len(l_links)):
+    l2_links = []
     driver.get(l_links[i])
     time.sleep(1)
     ele = driver.page_source  # get page source html
@@ -41,7 +41,7 @@ for i in range(len(l_links)):
             l2_links.append(home + st1)
 
 
-    print(l2_links)
+    # print(l2_links)
 
     for link2 in l2_links:
         driver.get(link2)
@@ -58,16 +58,18 @@ for i in range(len(l_links)):
 
             if st3.__contains__('translate/') and st3.__contains__('meaning'):
                 l3_links.append(home + st3)
+                fh.writelines(st3+'\n')
 
 
-        print(l3_links)
 
+# print(l3_links)
+fh.close()
         # driver.close()
-        # exit()
+        # exit()l2_links = []
 
 
 
-db = shelve.open('link.db')
+db = shelve.open('link')
 db['l3_links'] = l3_links
 db.close()
 driver.close()

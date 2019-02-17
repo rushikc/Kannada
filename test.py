@@ -4,10 +4,11 @@ import shelve
 # k = init()
 # k.assign()
 
-db = shelve.open('link.db')
-l_links = db['l_links']
+db = shelve.open('link')
+l_links = db['l3_links']
 db.close()
 
 
 print(k.a)
 print(len(k.klist))
+print(l_links)
