@@ -9,8 +9,8 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import bs4
 from bs4 import BeautifulSoup
-
 from Kannada.kannada import letters as k
+import  shelve
 
 
 driver = webdriver.Chrome()  #open chrome webdriver.
@@ -36,8 +36,12 @@ for i in range(len(atag)):
 
 print(l_links)
 
+db = shelve.open('link')
+db['l_links'] = l_links
+db.close()
 
-time.sleep(2)
+
+# time.sleep(2)
 driver.close()
 
 
