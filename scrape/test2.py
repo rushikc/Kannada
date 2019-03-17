@@ -1,44 +1,10 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.common.exceptions import WebDriverException
-from selenium.common.exceptions import NoSuchElementException
-# import timeit
 
-import selenium
-import time
-import bs4
-from bs4 import BeautifulSoup
-from Kannada.kannada import letters as k
-import shelve
+w2 = 'ಸಂತೋಷವಾಗಿಲ್ಲ'
+p=1
+uni = w2.encode('utf-8')
 
-
-
-
-
-for i in range(20):
-    if(i%5 == 0):
-        i=i+2
-    print(i)
-
-driver = webdriver.Chrome()
-
-time.sleep(500)
-# driver.get('https://www.shabdkosh.com/kn/translate/%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%B0%E0%B3%86%E0%B2%AF/%E0%B2%85%E0%B2%95%E0%B3%8D%E0%B2%95%E0%B2%B0%E0%B3%86%E0%B2%AF-meaning-in-Kannada-English')
-#
-# ele = driver.page_source  # get page source html
-# src = BeautifulSoup(ele, 'lxml')
-# while True:
-#     try:
-#         time.sleep(1)
-#         at = src.find_all('div', {'class': 'post'})
-#         atag = at[0].find_all('a')
-#
-#         print(atag[2].text)
-#
-#     except Exception as e:
-#         print(e)
-#         driver.refresh()
-driver.close()
+print(str(uni))
+# exit()
+if uni.__contains__(b'\xe0\xb2\xbf\xe0\xb2\xb2\xe0\xb3\x8d\xe0\xb2\xb2'):
+    p = 1 - p
+    print('y')

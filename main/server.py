@@ -4,11 +4,14 @@ from flask import Flask, redirect, url_for, request
 
 app = Flask(__name__)
 
+import html
 
 @app.route('/success/<name>')
 def success(name):
     texts = str(name)
     k2 = texts.replace("\n", "").replace("\r", "")
+
+    k2 = html.unescape(k2)
     file = open("data/comment.txt", "a+")
     file.writelines(k2)
     file.writelines('\n')
