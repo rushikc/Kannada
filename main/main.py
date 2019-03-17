@@ -20,7 +20,7 @@ for i in range(len(txt)):
             words[k1] = ''
         if words[k1].__contains__('ಅಸಂತೋಷ'):
             ind = words.index(words[k1])
-            print('ye')
+            # print('ye')
             words[ind] = words[ind].replace('ಅಸಂತೋಷ','ದುಃಖ')
 
 
@@ -28,7 +28,7 @@ for i in range(len(txt)):
     prob=[0,0,0,0,0]
 
     for w1 in words:
-        print(w1)
+        # print(w1)
         for w2 in k.happy:
             # print(w2)
             if w1.__contains__(w2):
@@ -46,7 +46,7 @@ for i in range(len(txt)):
                 hw = w2
 
                 print(prob)
-                break
+
 
 
         for w2 in k.sad:
@@ -66,7 +66,6 @@ for i in range(len(txt)):
                 sw = w2
 
                 print(prob)
-                break
 
 
 
