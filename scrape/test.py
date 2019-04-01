@@ -1,11 +1,11 @@
 import shelve
-#
-# db = shelve.open('dict')
-# db['num']  = 2207
+
+db = shelve.open('dict')
+# db['num']  = 50
 # db['num2'] = 5000
 # db['d'] = 0
-# # print(db['num'])
-# db.close()
+print(db['225'])
+db.close()
 #
 #
 # num = 1

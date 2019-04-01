@@ -45,7 +45,7 @@ for i in range(len(txt)):
                     prob[num] = (prob[num]+p)/2
                 hw = w2
 
-                print(prob)
+                # print(prob)
 
 
 
@@ -65,9 +65,41 @@ for i in range(len(txt)):
                     prob[num] = (prob[num]+p)/2
                 sw = w2
 
-                print(prob)
+                # print(prob)
 
+        for w2 in k.angry:
+            # print(w2)
+            if w1.__contains__(w2):
+                num=1
+                p = k.dangry[w2]
+                p = p[2]
+                uni = w1.encode('utf-8')
+                if uni.__contains__(b'\xe0\xb2\xbf\xe0\xb2\xb2\xe0\xb3\x8d\xe0\xb2\xb2'):
+                    p = 1 - p
 
+                if prob[num] == 0:
+                    prob[num] = p
+                else:
+                    prob[num] = (prob[num]+p)/2
+                aw = w2
+
+                # print(prob)
+
+    mi  = max(prob)
+    ind = prob.index(mi)
+
+    # print(ind)
+    print(prob)
+    if ind == 0:
+        print('Happy')
+    if ind == 1:
+        print('Sad')
+    if ind == 2:
+        print('Surprise')
+    if ind == 3:
+        print('Angry')
+    if ind == 4:
+        print('Fear')
 
 # \xe0\xb2\xbf\xe0\xb2\xb2\xe0\xb3\x8d\xe0\xb2\xb2
 
