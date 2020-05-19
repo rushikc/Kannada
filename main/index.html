@@ -7,7 +7,7 @@
   <!-- msrit Assist -->
   <title>Kannada</title>
   <meta charset="UTF-8">
-    <link rel="icon" type="image/gif/png" href="red.png">
+  <link rel="icon" type="image/gif/png" href="red.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -46,23 +46,6 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="sis.html">SIS Portal</a>
-          </li> -->
-
-         <!-- <li class="nav-item">
-            <a class="nav-link" href="exam.html">Exam results</a>
-          </li>
- -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="blood_donor_auth.html">Blood donors</a>
-          </li> -->
-
-          <!-- 
-          <li class="nav-item">
-            <a class="nav-link" href="feedback.html">Feedback</a>
-          </li> -->
         </ul>
       </div>
     </div>
@@ -76,21 +59,14 @@
 
 
 
-
+<!-- http://localhost:5000/login -->
 
   <div class="container" id="examf1" style="width:100%">
 
     <div class="panel-group">
       <div class="panel panel-primary">
-<!--         <div class="panel-heading">Search By USN</div>
- -->
-
-
         <div class="panel-body">
           <form name="usnform" action="http://localhost:5000/login" method="post" onsubmit="return validate()">
-
-
-
             <div class="form-row align-items-center">
               <div class="col-auto">
                 <label class="sr-only" for="inlineFormInputGroup"></label>
@@ -98,18 +74,16 @@
                   <div class="input-group-prepend">
                     <div class="input-group-text" >=></div>
                   </div>
-                  <input type="text" class="form-control" id="inlineFormInputGroup" name="nm" placeholder="USN" required=""  style="width: 550px;%;">
+                  <input type="text" class="form-control" id="inlineFormInputGroup" name="nm"  required=""  style="width: 550px;" >
                 </div>
               </div>
-
-
               <div class="col-auto">
                 <div class="form-check mb-2">
                 </div>
               </div>
 
               <div class="col-auto">
-                <button type="submit"  value="Submit" class="btn btn-primary mb-2">Submit</button>
+                <button type="submit"  value="Submit"  class="btn btn-primary mb-2">Submit</button>
               </div>
             </div>
           </form>
@@ -123,7 +97,24 @@
 
 
 
+<!-- <script type="text/javascript">
+  function getk()
+  {
+    var val = document.getElementById('inlineFormInputGroup').value;
+    console.log(val)
+    happy=['ಸಂತೋಷ','ಹರ್ಷಚಿತ್ತ','ಜಾಲಿ','ಉಲ್ಲಾಸ','ಸಂತುಷ್ಟ','ತೃಪ್ತಿ','ಉತ್ಸಾಹ','ಹರ್ಷಿತ','ಸುಖ','ನೆಮ್ಮದಿ']
+    sad=['ದುಃಖ','ಅತೃಪ್ತಿ','ಶೋಚನೀಯ','ನಿರುತ್ಸಾಹ','ಖಿನ್ನತೆ','ವಿಷ್ಣತೆ','ಖೇದ','ನಿರ್ಭಾಗ್ಯ','ಅವಮಾನ','ಅಸಂತೋಷ']
+    surprise=['ಆಶ್ಚರ್ಯ','ವಿಸ್ಮಯ','ಬೆರಗು','ಚಕಿತ','ಅಚ್ಚರಿ']
+    angry=['ಕೋಪ','ಹುಚ್ಚು','ಅಸಹ್ಯ']
+    fear=['ಭಯ','ಹೆದರಿಕೆ','ಅಂಜಿಕೆ','ದಿಗಿಲು']
 
+    ls = val.split(' ');
+    for(i=0;i<ls.length;i++)
+      if (ls[i].includes('ಅಂಜಿಕೆ'))
+        window.open('http://localhost:5000/login')
+    
+  }
+</script> -->
 
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -131,14 +122,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-135392376-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-135392376-1');
-</script>
 
 </body>
 </html>
